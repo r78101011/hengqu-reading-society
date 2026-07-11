@@ -1,17 +1,199 @@
 ---
+const readingDimensions = [
+  {
+    number: '01',
+    title: '閱他人',
+    question: '在關鍵時刻，你做了什麼選擇？又放棄了什麼？',
+    detail: '從真實生命故事出發，理解每一條路背後的猶豫、代價與承擔。',
+  },
+  {
+    number: '02',
+    title: '閱自己',
+    question: '我追求的是安全感、認同感，還是真正想走的方向？',
+    detail: '在文本、書寫與對話裡，練習辨認自己的價值、慣性與恐懼。',
+  },
+  {
+    number: '03',
+    title: '閱時代',
+    question: '個人的選擇，如何與我們身處的世界相連？',
+    detail: '把科技、產業與社會放回問題裡，理解人生從來不是在真空中發生。',
+  },
+];
 
+const principles = [
+  '問題先於答案',
+  '人生是意義題，不是工具題',
+  '思想是主體，不是裝飾',
+  '人必須放入世界中理解',
+  '社團是修養場，不是服務台',
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="橫渠閱人社：一個練習看懂人、看懂自己、看懂人生選擇的社群。" />
+    <meta name="generator" content={Astro.generator} />
+    <title>橫渠閱人社｜閱人，亦閱己</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="橫渠閱人社首頁">橫渠閱人社</a>
+      <nav aria-label="主要導覽">
+        <a href="#about">關於我們</a>
+        <a href="#reading">怎麼閱讀</a>
+        <a href="#join">加入對話</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="eyebrow">National Cheng Kung University · 2026</p>
+        <h1 id="intro-title">閱人，亦閱己。</h1>
+        <p class="lead">一個練習看懂人、看懂自己、看懂人生選擇的社群。</p>
+        <a class="button" href="#about">走進問題裡</a>
+        <p class="quote">「為天地立心，為生民立命，為往聖繼絕學，為萬世開太平。」<span>張載．橫渠四句</span></p>
+      </section>
+
+      <section id="about" class="section statement" aria-labelledby="about-title">
+        <p class="section-label">為什麼有橫渠</p>
+        <h2 id="about-title">在急著回答之前，<br />先讓真正的問題被好好提出。</h2>
+        <div class="statement-copy">
+          <p>在追求效率、成果與快速定位的校園裡，我們常被催促著回答「要成為什麼樣的人」。橫渠閱人社想保留一個能承受困惑、允許答案暫緩的公共空間。</p>
+          <p>我們不替你規劃人生，也不急著提供方向；我們一起問：什麼樣的人生，值得被認真地活？</p>
+        </div>
+      </section>
+
+      <section id="reading" class="section readings" aria-labelledby="reading-title">
+        <div class="section-heading">
+          <p class="section-label">三種閱讀</p>
+          <h2 id="reading-title">理解一個人，<br />也是理解世界與自己。</h2>
+        </div>
+        <div class="reading-grid">
+          {readingDimensions.map((item) => (
+            <article class="reading-card">
+              <p class="number">{item.number}</p>
+              <h3>{item.title}</h3>
+              <p class="question">{item.question}</p>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section principles" aria-labelledby="principles-title">
+        <p class="section-label">我們守住的事</p>
+        <h2 id="principles-title">慢一點，難一點，<br />但不把人生縮減成選項比較。</h2>
+        <ol>
+          {principles.map((principle, index) => <li><span>{String(index + 1).padStart(2, '0')}</span>{principle}</li>)}
+        </ol>
+      </section>
+
+      <section id="join" class="section join" aria-labelledby="join-title">
+        <p class="section-label">成為同行者</p>
+        <h2 id="join-title">有些問題，<br />不必一個人急著回答。</h2>
+        <p>橫渠閱人社正在籌備中。活動資訊與加入方式將在此公布。</p>
+        <span class="button button-light button-disabled">聯絡方式籌備中</span>
+      </section>
+    </main>
+
+    <footer>
+      <span>橫渠閱人社</span>
+      <span>National Cheng Kung University</span>
+    </footer>
+  </body>
 </html>
+
+<style>
+  :root {
+    color: #1e2723;
+    background: #f6f7f3;
+    font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+    font-synthesis: none;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; line-height: 1.75; }
+  a { color: inherit; text-decoration: none; }
+
+  .site-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 26px 48px;
+  }
+
+  .brand { font-size: 1.1rem; font-weight: 700; letter-spacing: .12em; }
+  nav { display: flex; font-family: system-ui, sans-serif; font-size: .84rem; gap: 26px; }
+  nav a:hover { color: #8e2f29; }
+
+  .intro {
+    border-bottom: 1px solid #c7cdc4;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: 660px;
+    padding: 112px 48px 54px;
+    position: relative;
+  }
+
+  .eyebrow, .section-label, .number {
+    color: #8e2f29;
+    font-family: system-ui, sans-serif;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3, p { margin-top: 0; }
+  h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); font-weight: 500; letter-spacing: .04em; line-height: 1.15; margin: 26px 0 20px; }
+  h2 { font-size: clamp(2rem, 4.2vw, 4.2rem); font-weight: 500; letter-spacing: .04em; line-height: 1.35; margin-bottom: 34px; }
+  .lead { font-size: clamp(1.15rem, 2vw, 1.55rem); max-width: 560px; }
+  .button { background: #1e2723; color: #fff; display: inline-block; font-family: system-ui, sans-serif; font-size: .9rem; margin-top: 18px; padding: 12px 23px; }
+  .button:hover { background: #8e2f29; }
+  .quote { bottom: 45px; color: #526057; font-size: .92rem; max-width: 420px; position: absolute; right: 48px; }
+  .quote span { display: block; font-family: system-ui, sans-serif; font-size: .7rem; letter-spacing: .08em; margin-top: 8px; }
+
+  .section { margin: 0 auto; max-width: 1280px; padding: 128px 48px; }
+  .statement { display: grid; grid-template-columns: 1fr 2fr; gap: 70px; }
+  .statement-copy { font-size: 1.12rem; max-width: 620px; }
+  .statement-copy p + p { margin-top: 28px; }
+  .readings { background: #e3e8e1; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
+  .section-heading { margin-bottom: 60px; }
+  .reading-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .reading-card { border-left: 1px solid #aeb8ae; padding: 0 32px; }
+  .reading-card:first-child { border-left: 0; padding-left: 0; }
+  .reading-card h3 { font-size: 2rem; font-weight: 500; margin: 28px 0 16px; }
+  .question { font-size: 1.12rem; line-height: 1.65; min-height: 100px; }
+  .principles { display: grid; grid-template-columns: 1fr 2fr; gap: 70px; }
+  .principles ol { border-top: 1px solid #c7cdc4; list-style: none; margin: 8px 0 0; padding: 0; }
+  .principles li { align-items: baseline; border-bottom: 1px solid #c7cdc4; display: flex; font-size: 1.18rem; gap: 24px; padding: 17px 0; }
+  .principles li span { color: #8e2f29; font-family: system-ui, sans-serif; font-size: .7rem; letter-spacing: .1em; }
+  .join { background: #24342c; color: #f6f7f3; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
+  .join .section-label { color: #e0a59a; }
+  .join > p:not(.section-label) { font-size: 1.1rem; max-width: 530px; }
+  .button-light { background: #f6f7f3; color: #1e2723; }
+  .button-disabled { cursor: default; }
+  footer { background: #24342c; border-top: 1px solid #617168; color: #d7ded7; display: flex; font-family: system-ui, sans-serif; font-size: .75rem; justify-content: space-between; padding: 25px max(48px, calc((100vw - 1184px) / 2)); }
+
+  @media (max-width: 720px) {
+    .site-header { padding: 20px 24px; }
+    nav { gap: 14px; font-size: .72rem; }
+    .intro { min-height: 600px; padding: 70px 24px 38px; }
+    .quote { bottom: 30px; left: 24px; right: 24px; }
+    .section { padding: 80px 24px; }
+    .statement, .principles { display: block; }
+    .statement .section-label, .principles .section-label { margin-bottom: 34px; }
+    .readings, .join { padding-left: 24px; padding-right: 24px; }
+    .reading-grid { display: block; }
+    .reading-card, .reading-card:first-child { border-left: 0; border-top: 1px solid #aeb8ae; padding: 28px 0; }
+    .reading-card:first-child { border-top: 0; padding-top: 0; }
+    .question { min-height: 0; }
+    footer { gap: 12px; padding: 22px 24px; }
+  }
+</style>
