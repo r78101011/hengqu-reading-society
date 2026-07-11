@@ -29,6 +29,9 @@ const principles = [
 ];
 
 const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-1Dw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default';
+const siteUrl = 'https://xbridge.maxosoft.com';
+const pageTitle = 'X-Bridge Yueren Club｜橫渠閱人社｜閱人，亦閱己';
+const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己、看懂人生選擇的社群。';
 ---
 
 <!doctype html>
@@ -36,13 +39,28 @@ const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="橫渠閱人社：一個練習看懂人、看懂自己、看懂人生選擇的社群。" />
+    <meta name="description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:image" content={`${siteUrl}/social-card.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={`${siteUrl}/social-card.png`} />
     <meta name="generator" content={Astro.generator} />
-    <title>橫渠閱人社｜閱人，亦閱己</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="橫渠閱人社首頁">橫渠閱人社</a>
+      <a class="brand" href="#top" aria-label="X-Bridge Yueren Club 橫渠閱人社首頁">
+        <span>橫渠閱人社</span>
+        <small>X-Bridge Yueren Club</small>
+      </a>
       <nav aria-label="主要導覽">
         <a href="#about">關於我們</a>
         <a href="#reading">怎麼閱讀</a>
@@ -52,7 +70,7 @@ const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-
 
     <main id="top">
       <section class="intro" aria-labelledby="intro-title">
-        <p class="eyebrow">National Cheng Kung University · 2026</p>
+        <p class="eyebrow">X-Bridge Yueren Club · National Cheng Kung University · 2026</p>
         <h1 id="intro-title">閱人，亦閱己。</h1>
         <p class="lead">一個練習看懂人、看懂自己、看懂人生選擇的社群。</p>
         <a class="button" href="#about">走進問題裡</a>
@@ -110,7 +128,7 @@ const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-
 
     <footer>
       <span>橫渠閱人社</span>
-      <span>National Cheng Kung University</span>
+      <span>X-Bridge Yueren Club · National Cheng Kung University</span>
     </footer>
   </body>
 </html>
@@ -137,7 +155,8 @@ const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-
     padding: 26px 48px;
   }
 
-  .brand { font-size: 1.1rem; font-weight: 700; letter-spacing: .12em; }
+  .brand { display: flex; flex-direction: column; font-size: 1.1rem; font-weight: 700; letter-spacing: .12em; line-height: 1.35; }
+  .brand small { color: #526057; font-family: system-ui, sans-serif; font-size: .58rem; font-weight: 600; letter-spacing: .06em; margin-top: 3px; }
   nav { display: flex; font-family: system-ui, sans-serif; font-size: .84rem; gap: 26px; }
   nav a:hover { color: #8e2f29; }
 
@@ -203,12 +222,12 @@ const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-
     .statement, .principles { display: block; }
     .statement .section-label, .principles .section-label { margin-bottom: 34px; }
     .readings, .join { padding-left: 24px; padding-right: 24px; }
+    .join { display: block; }
+    .qr-panel { margin-top: 40px; max-width: 190px; }
     .reading-grid { display: block; }
     .reading-card, .reading-card:first-child { border-left: 0; border-top: 1px solid #aeb8ae; padding: 28px 0; }
     .reading-card:first-child { border-top: 0; padding-top: 0; }
     .question { min-height: 0; }
-    .join { display: block; }
-    .qr-panel { margin-top: 40px; max-width: 190px; }
     footer { gap: 12px; padding: 22px 24px; }
   }
 </style>

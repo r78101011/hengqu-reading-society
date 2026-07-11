@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">X-Bridge Yueren Club 橫渠閱人社</title>
+  <desc id="description">閱人，亦閱己。</desc>
+  <rect width="1200" height="630" fill="#24342c"/>
+  <rect x="70" y="70" width="1060" height="490" fill="none" stroke="#9eaea2" stroke-width="2"/>
+  <text x="120" y="160" fill="#e0a59a" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">NATIONAL CHENG KUNG UNIVERSITY · 2026</text>
+  <text x="120" y="320" fill="#f6f7f3" font-family="Songti TC, PMingLiU, serif" font-size="104" letter-spacing="8">閱人，亦閱己。</text>
+  <text x="120" y="400" fill="#d7ded7" font-family="Songti TC, PMingLiU, serif" font-size="34">一個練習看懂人、看懂自己、看懂人生選擇的社群。</text>
+  <line x1="120" y1="470" x2="1080" y2="470" stroke="#617168" stroke-width="2"/>
+  <text x="120" y="520" fill="#f6f7f3" font-family="Songti TC, PMingLiU, serif" font-size="30">橫渠閱人社</text>
+  <text x="1080" y="520" fill="#d7ded7" font-family="Arial, sans-serif" font-size="22" letter-spacing="2" text-anchor="end">X-BRIDGE YUEREN CLUB</text>
+</svg>
