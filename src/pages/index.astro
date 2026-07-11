@@ -27,6 +27,8 @@ const principles = [
   '人必須放入世界中理解',
   '社團是修養場，不是服務台',
 ];
+
+const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-1Dw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default';
 ---
 
 <!doctype html>
@@ -92,10 +94,17 @@ const principles = [
       </section>
 
       <section id="join" class="section join" aria-labelledby="join-title">
-        <p class="section-label">成為同行者</p>
-        <h2 id="join-title">有些問題，<br />不必一個人急著回答。</h2>
-        <p>橫渠閱人社正在籌備中。活動資訊與加入方式將在此公布。</p>
-        <span class="button button-light button-disabled">聯絡方式籌備中</span>
+        <div class="join-copy">
+          <p class="section-label">成為同行者</p>
+          <h2 id="join-title">有些問題，<br />不必一個人急著回答。</h2>
+          <p>加入 LINE 社群，接收活動資訊，也和願意認真提問的人一起對話。</p>
+          <p class="join-note">為維持社群品質，加入時請簡短填寫加入理由。</p>
+          <a class="button button-light" href={lineInviteUrl} target="_blank" rel="noopener noreferrer">前往 LINE 社群</a>
+        </div>
+        <div class="qr-panel">
+          <img src="/line-community-qr.png" alt="加入成大橫渠閱人社 LINE 社群的 QR Code" width="720" height="720" />
+          <p>掃描加入社群</p>
+        </div>
       </section>
     </main>
 
@@ -174,11 +183,15 @@ const principles = [
   .principles ol { border-top: 1px solid #c7cdc4; list-style: none; margin: 8px 0 0; padding: 0; }
   .principles li { align-items: baseline; border-bottom: 1px solid #c7cdc4; display: flex; font-size: 1.18rem; gap: 24px; padding: 17px 0; }
   .principles li span { color: #8e2f29; font-family: system-ui, sans-serif; font-size: .7rem; letter-spacing: .1em; }
-  .join { background: #24342c; color: #f6f7f3; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
+  .join { align-items: center; background: #24342c; color: #f6f7f3; display: grid; gap: 70px; grid-template-columns: minmax(0, 1fr) 220px; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
   .join .section-label { color: #e0a59a; }
-  .join > p:not(.section-label) { font-size: 1.1rem; max-width: 530px; }
+  .join-copy > p:not(.section-label) { font-size: 1.1rem; max-width: 530px; }
+  .join-note { color: #d7ded7; font-size: .95rem !important; margin-bottom: 8px; }
   .button-light { background: #f6f7f3; color: #1e2723; }
   .button-disabled { cursor: default; }
+  .qr-panel { background: #f6f7f3; color: #1e2723; padding: 14px; text-align: center; }
+  .qr-panel img { display: block; height: auto; max-width: 190px; width: 100%; }
+  .qr-panel p { font-family: system-ui, sans-serif; font-size: .74rem; letter-spacing: .06em; margin: 8px 0 0; }
   footer { background: #24342c; border-top: 1px solid #617168; color: #d7ded7; display: flex; font-family: system-ui, sans-serif; font-size: .75rem; justify-content: space-between; padding: 25px max(48px, calc((100vw - 1184px) / 2)); }
 
   @media (max-width: 720px) {
@@ -194,6 +207,8 @@ const principles = [
     .reading-card, .reading-card:first-child { border-left: 0; border-top: 1px solid #aeb8ae; padding: 28px 0; }
     .reading-card:first-child { border-top: 0; padding-top: 0; }
     .question { min-height: 0; }
+    .join { display: block; }
+    .qr-panel { margin-top: 40px; max-width: 190px; }
     footer { gap: 12px; padding: 22px 24px; }
   }
 </style>
