@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title">
+  <title id="title">橫渠閱人社 Logo 符號 v01</title>
+  <g fill="none" stroke="#0B2D50" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M170 465 A335 335 0 0 1 565 115" stroke-width="70"/>
+  </g>
+  <path fill="#0B2D50" d="M160 438h635v70H160z"/>
+  <path fill="#F3EFE6" d="M160 508h635v34H160z"/>
+  <path fill="#0B2D50" d="M155 542c78-48 185-49 285 7v263C300 805 192 718 155 610z"/>
+  <path fill="#0B2D50" d="M845 542c-78-48-185-49-285 7v263c140-7 248-94 285-202z"/>
+  <path fill="#F3EFE6" d="M440 548h120v264H440z"/>
+  <path fill="#0B2D50" d="M440 508h120v43c-18 0-31 15-31 34v22h-58v-22c0-19-13-34-31-34z"/>
+  <circle cx="650" cy="285" r="58" fill="#C9573B"/>
+</svg>

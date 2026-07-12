@@ -66,13 +66,17 @@ const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己�
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={`${siteUrl}/social-card.png`} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
     <title>{pageTitle}</title>
   </head>
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="X-Bridge Yueren Club 橫渠閱人社首頁">
-        <span>橫渠閱人社</span>
-        <small>X-Bridge Yueren Club</small>
+        <img class="brand-mark" src="/brand/logo-mark.svg" alt="" width="44" height="44" />
+        <span class="brand-copy">
+          <span>橫渠閱人社</span>
+          <small>X-Bridge Yueren Club</small>
+        </span>
       </a>
       <nav aria-label="主要導覽">
         <a href="#about">關於我們</a>
@@ -166,8 +170,8 @@ const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己�
 
 <style>
   :root {
-    color: #1e2723;
-    background: #f6f7f3;
+    color: #243746;
+    background: #f3efe6;
     font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
     font-synthesis: none;
   }
@@ -186,13 +190,15 @@ const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己�
     padding: 26px 48px;
   }
 
-  .brand { display: flex; flex-direction: column; font-size: 1.1rem; font-weight: 700; letter-spacing: .12em; line-height: 1.35; }
-  .brand small { color: #526057; font-family: system-ui, sans-serif; font-size: .58rem; font-weight: 600; letter-spacing: .06em; margin-top: 3px; }
+  .brand { align-items: center; display: flex; font-size: 1.1rem; font-weight: 700; gap: 10px; letter-spacing: .12em; line-height: 1.35; }
+  .brand-mark { flex: 0 0 auto; height: 40px; width: 40px; }
+  .brand-copy { display: flex; flex-direction: column; }
+  .brand small { color: #52685a; font-family: system-ui, sans-serif; font-size: .58rem; font-weight: 600; letter-spacing: .06em; margin-top: 3px; }
   nav { display: flex; font-family: system-ui, sans-serif; font-size: .84rem; gap: 26px; }
-  nav a:hover { color: #8e2f29; }
+  nav a:hover { color: #a65d45; }
 
   .intro {
-    border-bottom: 1px solid #c7cdc4;
+    border-bottom: 1px solid #d8d5cc;
     margin: 0 auto;
     max-width: 1280px;
     min-height: 660px;
@@ -201,7 +207,7 @@ const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己�
   }
 
   .eyebrow, .section-label, .number {
-    color: #8e2f29;
+    color: #a65d45;
     font-family: system-ui, sans-serif;
     font-size: .72rem;
     font-weight: 700;
@@ -213,42 +219,42 @@ const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己�
   h1 { font-size: clamp(3.5rem, 9vw, 7.5rem); font-weight: 500; letter-spacing: .04em; line-height: 1.15; margin: 26px 0 20px; }
   h2 { font-size: clamp(2rem, 4.2vw, 4.2rem); font-weight: 500; letter-spacing: .04em; line-height: 1.35; margin-bottom: 34px; }
   .lead { font-size: clamp(1.15rem, 2vw, 1.55rem); max-width: 560px; }
-  .button { background: #1e2723; color: #fff; display: inline-block; font-family: system-ui, sans-serif; font-size: .9rem; margin-top: 18px; padding: 12px 23px; }
-  .button:hover { background: #8e2f29; }
-  .quote { bottom: 45px; color: #526057; font-size: .92rem; max-width: 420px; position: absolute; right: 48px; }
+  .button { background: #243746; color: #fff; display: inline-block; font-family: system-ui, sans-serif; font-size: .9rem; margin-top: 18px; padding: 12px 23px; }
+  .button:hover { background: #a65d45; }
+  .quote { bottom: 45px; color: #52685a; font-size: .92rem; max-width: 420px; position: absolute; right: 48px; }
   .quote span { display: block; font-family: system-ui, sans-serif; font-size: .7rem; letter-spacing: .08em; margin-top: 8px; }
 
   .section { margin: 0 auto; max-width: 1280px; padding: 128px 48px; }
   .statement { display: grid; grid-template-columns: 1fr 2fr; gap: 70px; }
   .statement-copy { font-size: 1.12rem; max-width: 620px; }
   .statement-copy p + p { margin-top: 28px; }
-  .readings { background: #e3e8e1; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
+  .readings { background: #d8d5cc; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
   .section-heading { margin-bottom: 60px; }
   .reading-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-  .reading-card { border-left: 1px solid #aeb8ae; padding: 0 32px; }
+  .reading-card { border-left: 1px solid #aeb0a8; padding: 0 32px; }
   .reading-card:first-child { border-left: 0; padding-left: 0; }
   .reading-card h3 { font-size: 2rem; font-weight: 500; margin: 28px 0 16px; }
   .question { font-size: 1.12rem; line-height: 1.65; min-height: 100px; }
-  .encounters { border-bottom: 1px solid #c7cdc4; }
-  .encounter-grid { border-top: 1px solid #c7cdc4; display: grid; grid-template-columns: repeat(3, 1fr); }
-  .encounter-item { border-left: 1px solid #c7cdc4; padding: 30px 32px 6px; }
+  .encounters { border-bottom: 1px solid #d8d5cc; }
+  .encounter-grid { border-top: 1px solid #d8d5cc; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .encounter-item { border-left: 1px solid #d8d5cc; padding: 30px 32px 6px; }
   .encounter-item:first-child { border-left: 0; padding-left: 0; }
   .encounter-item h3 { font-size: 1.75rem; font-weight: 500; margin: 25px 0 14px; }
   .principles { display: grid; grid-template-columns: 1fr 2fr; gap: 70px; }
-  .principles ol { border-top: 1px solid #c7cdc4; list-style: none; margin: 8px 0 0; padding: 0; }
-  .principles li { align-items: baseline; border-bottom: 1px solid #c7cdc4; display: flex; font-size: 1.18rem; gap: 24px; padding: 17px 0; }
-  .principles li span { color: #8e2f29; font-family: system-ui, sans-serif; font-size: .7rem; letter-spacing: .1em; }
-  .join { align-items: center; background: #24342c; color: #f6f7f3; display: grid; gap: 70px; grid-template-columns: minmax(0, 1fr) 220px; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
-  .join .section-label { color: #e0a59a; }
+  .principles ol { border-top: 1px solid #d8d5cc; list-style: none; margin: 8px 0 0; padding: 0; }
+  .principles li { align-items: baseline; border-bottom: 1px solid #d8d5cc; display: flex; font-size: 1.18rem; gap: 24px; padding: 17px 0; }
+  .principles li span { color: #a65d45; font-family: system-ui, sans-serif; font-size: .7rem; letter-spacing: .1em; }
+  .join { align-items: center; background: #243746; color: #f3efe6; display: grid; gap: 70px; grid-template-columns: minmax(0, 1fr) 220px; max-width: none; padding-left: max(48px, calc((100vw - 1184px) / 2)); padding-right: max(48px, calc((100vw - 1184px) / 2)); }
+  .join .section-label { color: #d9a090; }
   .join-copy > p:not(.section-label) { font-size: 1.1rem; max-width: 530px; }
-  .join-note { color: #d7ded7; font-size: .95rem !important; margin-bottom: 8px; }
-  .join-status { color: #e0a59a; font-family: system-ui, sans-serif; font-size: .75rem !important; letter-spacing: .06em; }
-  .button-light { background: #f6f7f3; color: #1e2723; }
+  .join-note { color: #d8d5cc; font-size: .95rem !important; margin-bottom: 8px; }
+  .join-status { color: #d9a090; font-family: system-ui, sans-serif; font-size: .75rem !important; letter-spacing: .06em; }
+  .button-light { background: #f3efe6; color: #243746; }
   .button-disabled { cursor: default; }
-  .qr-panel { background: #f6f7f3; color: #1e2723; padding: 14px; text-align: center; }
+  .qr-panel { background: #f3efe6; color: #243746; padding: 14px; text-align: center; }
   .qr-panel img { display: block; height: auto; max-width: 190px; width: 100%; }
   .qr-panel p { font-family: system-ui, sans-serif; font-size: .74rem; letter-spacing: .06em; margin: 8px 0 0; }
-  footer { background: #24342c; border-top: 1px solid #617168; color: #d7ded7; display: flex; font-family: system-ui, sans-serif; font-size: .75rem; justify-content: space-between; padding: 25px max(48px, calc((100vw - 1184px) / 2)); }
+  footer { background: #243746; border-top: 1px solid #52685a; color: #d8d5cc; display: flex; font-family: system-ui, sans-serif; font-size: .75rem; justify-content: space-between; padding: 25px max(48px, calc((100vw - 1184px) / 2)); }
 
   @media (max-width: 720px) {
     .site-header { align-items: flex-start; flex-direction: column; gap: 12px; padding: 20px 24px; }
@@ -262,9 +268,9 @@ const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己�
     .join { display: block; }
     .qr-panel { margin-top: 40px; max-width: 190px; }
     .reading-grid, .encounter-grid { display: block; }
-    .reading-card, .reading-card:first-child { border-left: 0; border-top: 1px solid #aeb8ae; padding: 28px 0; }
+    .reading-card, .reading-card:first-child { border-left: 0; border-top: 1px solid #aeb0a8; padding: 28px 0; }
     .reading-card:first-child { border-top: 0; padding-top: 0; }
-    .encounter-item, .encounter-item:first-child { border-left: 0; border-top: 1px solid #c7cdc4; padding: 28px 0; }
+    .encounter-item, .encounter-item:first-child { border-left: 0; border-top: 1px solid #d8d5cc; padding: 28px 0; }
     .encounter-item:first-child { border-top: 0; padding-top: 0; }
     .question { min-height: 0; }
     footer { gap: 12px; padding: 22px 24px; }
