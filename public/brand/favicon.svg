@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
-  <title id="title">橫渠閱人社 favicon v02</title>
+  <title id="title">橫渠閱人社 favicon v03</title>
   <rect width="64" height="64" rx="14" fill="#243746"/>
-  <path d="M12 34H52" fill="none" stroke="#F3EFE6" stroke-linecap="round" stroke-width="5"/>
-  <path d="M13 39C20 35 26 35 32 41V51C24 50 17 47 13 42Z" fill="#F3EFE6"/>
-  <path d="M51 39C44 35 38 35 32 41V51C40 50 47 47 51 42Z" fill="#F3EFE6"/>
-  <circle cx="45" cy="21" r="7" fill="#A65D45"/>
+  <path d="M19 13C12.8 18.7 10 26.3 10 35H54" fill="none" stroke="#F3EFE6" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  <circle cx="43" cy="26" r="6.5" fill="#A65D45"/>
+  <path d="M13 40C20.3 37.2 27 38 32 43V52C24.2 51.4 17.3 48.5 13 43Z" fill="#F3EFE6"/>
+  <path d="M51 40C43.7 37.2 37 38 32 43V52C39.8 51.4 46.7 48.5 51 43Z" fill="#F3EFE6"/>
 </svg>
