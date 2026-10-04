@@ -62,6 +62,7 @@ const participationQuestions = [
 
 const lineInviteUrl = 'https://line.me/ti/g2/o4xP4WGxO__9CgVgP-ReAbyjnv0yBUfdZY-1Dw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default';
 const siteUrl = 'https://xbridge.maxosoft.com';
+const canonicalUrl = `${siteUrl}/`;
 const pageTitle = 'X-Bridge Yueren Club｜橫渠閱人社｜閱人，亦閱己';
 const pageDescription = '橫渠閱人社：一個練習看懂人、看懂自己、看懂人生選擇的社群。';
 const socialImageUrl = `${siteUrl}/social-card.png?v=20260910`;
@@ -78,7 +79,7 @@ const socialImageDescription = '橫渠閱人社 X-Bridge Yueren Club：閱人，
     <meta property="og:locale" content="zh_TW" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:url" content={siteUrl} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={socialImageUrl} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -89,6 +90,7 @@ const socialImageDescription = '橫渠閱人社 X-Bridge Yueren Club：閱人，
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={socialImageDescription} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
     <title>{pageTitle}</title>
   </head>

@@ -21,11 +21,7 @@ npm run build
 
 將這個 repository 推送至 GitHub 後，在 repository 的 **Settings → Pages → Build and deployment** 選擇 **GitHub Actions**。之後每次推送到 `main`，`.github/workflows/deploy.yml` 會自動建置並發佈網站。
 
-目前的正式網站網址為：
-
-```text
-https://xbridge.maxosoft.com/
-```
+目前的正式網站為：[橫渠閱人社｜X-Bridge Yueren Club](https://xbridge.maxosoft.com/)。
 
 GitHub Pages 的預設網址仍可使用：
 
