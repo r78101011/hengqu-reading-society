@@ -67,6 +67,13 @@ const pageTitle = '成大橫渠閱人社｜閱人，亦閱己';
 const pageDescription = '成大橫渠閱人社：一個在成大校園練習看懂人、看懂自己、看懂人生選擇的社群。';
 const socialImageUrl = `${siteUrl}/social-card.png?v=20261004`;
 const socialImageDescription = '成大橫渠閱人社 X-Bridge Yueren Club：閱人，亦閱己。成功大學學生社團申請籌備中。';
+const websiteStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: '成大橫渠閱人社',
+  alternateName: ['X-Bridge Yueren Club', '橫渠閱人社', 'xbridge.maxosoft.com'],
+  url: canonicalUrl,
+};
 ---
 
 <!doctype html>
@@ -77,6 +84,7 @@ const socialImageDescription = '成大橫渠閱人社 X-Bridge Yueren Club：閱
     <meta name="description" content={pageDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_TW" />
+    <meta property="og:site_name" content="成大橫渠閱人社" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonicalUrl} />
@@ -90,8 +98,10 @@ const socialImageDescription = '成大橫渠閱人社 X-Bridge Yueren Club：閱
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={socialImageDescription} />
     <meta name="generator" content={Astro.generator} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteStructuredData)}></script>
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{pageTitle}</title>
   </head>
   <body>
