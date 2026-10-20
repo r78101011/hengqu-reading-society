@@ -1,0 +1,181 @@
+---
+const resources = [
+  {
+    title: 'AI Agent 訓練營｜8 週課綱',
+    detail: '2026-10-20 版本',
+    meta: 'PDF · 4 頁 · 373 KB',
+    href: '/downloads/ai-agent-camp-syllabus-20261020.pdf',
+  },
+  {
+    title: 'AI Agent 訓練營｜第 1–2 週講義',
+    detail: '第一、二週課程資料',
+    meta: 'PDF · 22 頁 · 4.1 MB',
+    href: '/downloads/ai-agent-camp-weeks-1-2.pdf',
+  },
+];
+
+const siteUrl = 'https://xbridge.maxosoft.com';
+const canonicalUrl = `${siteUrl}/resources/`;
+const pageTitle = 'AI Agent 訓練營資料｜成大橫渠閱人社';
+const pageDescription = '成大橫渠閱人社 AI Agent 訓練營的課綱與課程講義下載頁。';
+const socialImageUrl = `${siteUrl}/social-card.png?v=20261004`;
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={pageDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:site_name" content="成大橫渠閱人社" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="X-Bridge Yueren Club 成大橫渠閱人社首頁">
+        <img class="brand-mark" src="/brand/logo-primary.png" alt="" width="280" height="268" />
+        <span class="brand-copy">
+          <span>成大橫渠閱人社</span>
+          <small>X-Bridge Yueren Club</small>
+        </span>
+      </a>
+      <a class="home-link" href="/">回到首頁</a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="resources-title">
+        <p class="eyebrow">AI AGENT CAMP · COURSE RESOURCES</p>
+        <h1 id="resources-title">AI Agent 訓練營<br />課程資料</h1>
+        <p class="lead">點選下方項目即可開啟 PDF。在 LINE 內開啟後，可使用瀏覽器的分享或下載功能保存檔案。</p>
+      </section>
+
+      <section class="resource-section" aria-label="可下載的課程資料">
+        <div class="resource-list">
+          {resources.map((resource, index) => (
+            <article class="resource-card">
+              <p class="number">{String(index + 1).padStart(2, '0')}</p>
+              <div class="resource-copy">
+                <h2>{resource.title}</h2>
+                <p>{resource.detail}</p>
+                <p class="meta">{resource.meta}</p>
+              </div>
+              <a class="button" href={resource.href} target="_blank" rel="noopener">開啟 PDF <span aria-hidden="true">↗</span></a>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>成大橫渠閱人社</span>
+      <span>X-Bridge Yueren Club · 發起於成功大學 · 社團申請籌備中</span>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    color: #243746;
+    background: #f3efe6;
+    font-family: "Noto Serif TC", "Songti TC", "PMingLiU", serif;
+    font-synthesis: none;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; line-height: 1.75; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 3px solid #a65d45; outline-offset: 4px; }
+
+  .site-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 26px 48px;
+  }
+  .brand { align-items: center; display: inline-flex; font-size: 1.1rem; font-weight: 700; gap: 10px; line-height: 1.35; }
+  .brand-mark { flex: 0 0 auto; height: 40px; width: auto; }
+  .brand-copy { display: flex; flex-direction: column; }
+  .brand small { color: #52685a; font-family: system-ui, sans-serif; font-size: .65rem; font-weight: 600; margin-top: 3px; }
+  .home-link { font-family: system-ui, sans-serif; font-size: .9rem; min-height: 44px; padding: 8px 6px; }
+  .home-link:hover { color: #8a4834; }
+
+  .intro, .resource-section { margin: 0 auto; max-width: 1184px; padding-left: 48px; padding-right: 48px; }
+  .intro { border-bottom: 1px solid #d8d5cc; padding-bottom: 64px; padding-top: 72px; }
+  .eyebrow, .number { color: #8a4834; font-family: system-ui, sans-serif; font-size: .8rem; font-weight: 700; letter-spacing: .12em; }
+  .eyebrow { margin: 0; }
+  h1 { font-size: clamp(3rem, 7vw, 5.7rem); font-weight: 500; letter-spacing: -.03em; line-height: 1.12; margin: 24px 0; }
+  .lead { color: #475b4e; font-size: 1.12rem; margin: 0; max-width: 690px; }
+
+  .resource-section { padding-bottom: 96px; padding-top: 32px; }
+  .resource-list { border-top: 1px solid #c9c8c0; }
+  .resource-card {
+    align-items: center;
+    border-bottom: 1px solid #c9c8c0;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    padding: 34px 0;
+  }
+  .number { margin: 0; }
+  .resource-copy h2 { font-size: 1.45rem; font-weight: 600; line-height: 1.4; margin: 0 0 7px; }
+  .resource-copy p { color: #475b4e; margin: 0; }
+  .resource-copy .meta { font-family: system-ui, sans-serif; font-size: .82rem; margin-top: 5px; }
+  .button {
+    align-items: center;
+    background: #243746;
+    color: #fff;
+    display: inline-flex;
+    font-family: system-ui, sans-serif;
+    font-size: .93rem;
+    gap: 8px;
+    justify-content: center;
+    min-height: 48px;
+    padding: 11px 20px;
+  }
+  .button:hover { background: #8a4834; }
+
+  footer {
+    background: #243746;
+    color: #d8d5cc;
+    display: flex;
+    font-family: system-ui, sans-serif;
+    font-size: .75rem;
+    justify-content: space-between;
+    padding: 25px max(48px, calc((100vw - 1184px) / 2));
+  }
+
+  @media (max-width: 720px) {
+    .site-header { padding: 20px 24px; }
+    .brand { font-size: 1rem; }
+    .brand-mark { height: 36px; }
+    .brand small { font-size: .58rem; }
+    .home-link { font-size: .83rem; }
+    .intro, .resource-section { padding-left: 24px; padding-right: 24px; }
+    .intro { padding-bottom: 48px; padding-top: 42px; }
+    h1 { font-size: clamp(2.7rem, 15vw, 4rem); }
+    .lead { font-size: 1.02rem; }
+    .resource-section { padding-bottom: 64px; padding-top: 20px; }
+    .resource-card { align-items: start; gap: 10px 16px; grid-template-columns: 34px minmax(0, 1fr); padding: 28px 0; }
+    .resource-copy h2 { font-size: 1.25rem; }
+    .button { grid-column: 2; margin-top: 8px; width: 100%; }
+    footer { flex-wrap: wrap; gap: 12px; padding: 22px 24px; }
+  }
+</style>
