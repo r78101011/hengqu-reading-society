@@ -117,6 +117,7 @@ const websiteStructuredData = {
         <a href="#about">關於我們</a>
         <a href="#reading">怎麼閱讀</a>
         <a href="#approach">怎麼相遇</a>
+        <a href="/resources/">課程資料</a>
         <a href="#join">加入對話</a>
       </nav>
     </header>
@@ -130,7 +131,11 @@ const websiteStructuredData = {
           <a class="button" href="#about">認識橫渠</a>
           <a class="button button-outline" href={lineInviteUrl} target="_blank" rel="noopener noreferrer">加入 LINE 社群</a>
         </div>
-        <p class="quote">「為天地立心，為生民立命，為往聖繼絕學，為萬世開太平。」<span>張載．橫渠四句</span></p>
+        <p class="quote">
+          <span class="quote-line">「為天地立心，為生民立命；</span>
+          <span class="quote-line">為往聖繼絕學，為萬世開太平。」</span>
+          <span class="quote-source">張載．橫渠四句</span>
+        </p>
       </section>
 
       <section id="about" class="section statement" aria-labelledby="about-title">
@@ -292,7 +297,8 @@ const websiteStructuredData = {
   .button-outline { background: transparent; border-color: #243746; color: #243746; }
   .button-outline:hover { border-color: #a65d45; }
   .quote { color: #52685a; font-size: .95rem; margin: 64px 0 0 auto; max-width: 420px; }
-  .quote span { display: block; font-family: system-ui, sans-serif; font-size: .8rem; margin-top: 8px; }
+  .quote-line { display: block; white-space: nowrap; }
+  .quote-source { display: block; font-family: system-ui, sans-serif; font-size: .8rem; margin-top: 8px; }
 
   .section { margin: 0 auto; max-width: 1280px; padding: 96px 48px; }
   .statement, .principles, .participation { align-items: start; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr); gap: 48px; }
