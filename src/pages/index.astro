@@ -69,10 +69,22 @@ const socialImageUrl = `${siteUrl}/social-card.png?v=20261004`;
 const socialImageDescription = '成大橫渠閱人社 X-Bridge Yueren Club：閱人，亦閱己。成功大學學生社團申請籌備中。';
 const websiteStructuredData = {
   '@context': 'https://schema.org',
+  '@graph': [{
+    '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
+    name: '成大橫渠閱人社',
+    alternateName: ['橫渠閱人社', 'X-Bridge Yueren Club'],
+    url: canonicalUrl,
+    logo: `${siteUrl}/brand/logo-primary.png`,
+    description: '發起於成功大學、學生社團申請籌備中的閱讀與對話社群。一起練習看懂人、看懂自己、看懂人生選擇。',
+  }, {
   '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
   name: '成大橫渠閱人社',
   alternateName: ['X-Bridge Yueren Club', '橫渠閱人社', 'xbridge.maxosoft.com'],
   url: canonicalUrl,
+  publisher: { '@id': `${siteUrl}/#organization` },
+  }],
 };
 ---
 
@@ -235,7 +247,7 @@ const websiteStructuredData = {
 
     <footer>
       <span>成大橫渠閱人社</span>
-      <span>X-Bridge Yueren Club · 成功大學學生社群</span>
+      <span>X-Bridge Yueren Club · 發起於成功大學 · 社團申請籌備中</span>
     </footer>
   </body>
 </html>
