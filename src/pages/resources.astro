@@ -12,14 +12,14 @@ const curriculum = [
 
 const resources = [
   {
-    title: 'AI Agent 訓練營｜8 週課綱',
-    detail: '2026-10-20 版本',
+    title: '橫渠 AI 共作計畫｜8 週課綱',
+    detail: '2026-10-20 版本 · PDF 使用原課名「AI Agent 訓練營」',
     meta: 'PDF · 4 頁 · 373 KB',
     href: '/downloads/ai-agent-camp-syllabus-20261020.pdf',
   },
   {
-    title: 'AI Agent 訓練營｜第 1–2 週講義',
-    detail: '第一、二週課程資料',
+    title: '橫渠 AI 共作計畫｜第 1–2 週講義',
+    detail: '第 1–2 週課程資料 · PDF 使用原課名「AI Agent 訓練營」',
     meta: 'PDF · 22 頁 · 4.1 MB',
     href: '/downloads/ai-agent-camp-weeks-1-2.pdf',
   },
@@ -27,8 +27,8 @@ const resources = [
 
 const siteUrl = 'https://xbridge.maxosoft.com';
 const canonicalUrl = `${siteUrl}/resources/`;
-const pageTitle = 'AI Agent 訓練營｜8 週課程介紹與講義｜成大橫渠閱人社';
-const pageDescription = '橫渠閱人社 AI Agent 訓練營，面向成功大學學生，不限科系、不需程式背景。每週 1 小時，透過 8 週實作學習 SOP、Connector、Skill 與工作流；查看課程大綱及下載講義。';
+const pageTitle = '橫渠 AI 共作計畫｜養一位 AI 實習生｜8 週 AI Agent 實作課';
+const pageDescription = '橫渠 AI 共作計畫，由成大橫渠閱人社主辦。養一位 AI 實習生，從你的第一件真實任務開始。零程式背景，8 週 AI Agent 實作課，學習 SOP、Connector、Skill 與工作流；查看課程大綱及下載講義。';
 const socialImageUrl = `${siteUrl}/social-card.png?v=20261004`;
 ---
 
@@ -74,9 +74,10 @@ const socialImageUrl = `${siteUrl}/social-card.png?v=20261004`;
 
     <main>
       <section class="intro" aria-labelledby="resources-title">
-        <p class="eyebrow">AI AGENT CAMP · 8 週實作課程</p>
-        <h1 id="resources-title"><span>AI Agent</span> <span>訓練營</span></h1>
-        <p class="lead">跳脫對話框，讓 AI 替你做事。從自己的真實任務出發，用 8 週練習做出一支能持續幫自己工作的 AI Agent。</p>
+        <p class="eyebrow">橫渠 AI 共作計畫</p>
+        <h1 id="resources-title"><span>養一位</span> <span>AI 實習生</span></h1>
+        <p class="lead">從你的第一件真實任務開始。用 8 週一起練習，做出一支能持續幫自己工作的 AI Agent。</p>
+        <p class="course-tagline">零程式背景・8 週 AI Agent 實作課</p>
         <p class="course-meta">主辦：橫渠閱人社 · 發起於成功大學 · 學生社團申請籌備中</p>
         <nav class="course-nav" aria-label="課程頁導覽"><a href="#overview">課程介紹</a><a href="#curriculum">8 週大綱</a><a href="#preparation">課前準備</a><a href="#downloads">下載講義</a></nav>
       </section>
@@ -178,6 +179,7 @@ const socialImageUrl = `${siteUrl}/social-card.png?v=20261004`;
   h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 500; line-height: 1.4; margin: 16px 0 24px; }
   h3 { font-size: 1.2rem; line-height: 1.5; margin: 26px 0 12px; }
   .course-meta, .version-note { color: #475b4e; font-family: system-ui, sans-serif; font-size: .85rem; margin-top: 24px; }
+  .course-tagline { color: #475b4e; font-family: system-ui, sans-serif; font-size: 1rem; margin: 20px 0 0; }
   .course-nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; font-family: system-ui, sans-serif; }
   .course-nav a, .text-link { display: inline-block; padding: 8px 0; text-decoration: underline; text-underline-offset: 5px; }
   .learning-outcomes li, .preparation-list li { margin-bottom: 12px; }
